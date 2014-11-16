@@ -3,6 +3,13 @@
 {% block nav-about %}active{% endblock %}
 {% block nav-about-link %}#{% endblock %}
 
+{% load static %}
+
 {% block content %}
-    Me is me
+    <div class="about-description">
+        <p>You can call me Mikhail. Wanna write me a letter? Here you <a href="mailto:crassirostris@yandex.com">go</a></p>
+    </div>
+    <div class="photo-container">
+        <img src="{% static 'img/me.jpg' %}" alt="Yep, that'me" />
+    </div>
 {% endblock %}
