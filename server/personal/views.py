@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from personal import models
 
 def index(request):
     print('index')
@@ -15,4 +16,4 @@ def contacts(request):
 
 
 def gallery(request):
-    return render(request, 'gallery.html')
+    return render(request, 'gallery.html', { 'images': models.Image.objects.all() })

@@ -28,3 +28,50 @@
     height: 150px;
     padding: 0;
 }
+
+.image-previews-container {
+    max-width: 100%;
+    margin: auto;
+    padding: 50px;
+    vertical-align: middle;
+}
+
+.image-preview {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    margin: 35px;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    -ms-behavior: url(/static/css/backgroundsize.min.htc);
+    background-position: center;
+}
+
+.image-preview-animation {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+}
+
+.image-preview-animation:hover {
+    height: 300px;
+    width: 300px;
+    margin: -15px;
+}
+
+.modal-image {
+    max-width: 100%;
+    padding: 10px;
+    display: inline-block;
+}
+
+.modal-image-container {
+    margin: 30px auto;
+    max-width: 90%;
+}
+
+.modal-image-container .modal-content {
+    display: inline-block;
+}

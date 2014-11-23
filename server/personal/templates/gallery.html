@@ -6,7 +6,18 @@
 {% load static %}
 
 {% block content %}
-    <div style="text-align: center">
-        <img style="max-width: 100%" src="{% static "img/soon.png" %}" alt="Nothing to see here" />
+    <div class="image-previews-container">
+        {% for image in images %}
+            <div class="image-preview-animation image-preview" style="background-image: url({{ image.preview_href }});" full-image="{{ image.href }}">
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-image-container">
+            <div class="modal-content">
+                <img id="modalImage" class="modal-image" src="" alt="This is an image, don't you see?">
+            </div>
+        </div>
     </div>
 {% endblock %}
