@@ -74,4 +74,5 @@
 
 .modal-image-container .modal-content {
     display: inline-block;
+    max-width: 100%;
 }
